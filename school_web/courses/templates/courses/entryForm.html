@@ -3,8 +3,10 @@
 {% block title %} Форма для записи {% endblock %}
 
 {% block content %}
+
 <h1>Форма для записи</h1>
-
-
+{% for el in subjects %}
+<p>{{el}}</p></br>
+{% endfor %}
 
 {% endblock %}
