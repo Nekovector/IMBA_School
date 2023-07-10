@@ -5,8 +5,15 @@
 {% block content %}
 
 <h1>Форма для записи</h1>
-{% for el in subjects %}
-<p>{{el}}</p></br>
-{% endfor %}
+<form  method="post">
+    {% csrf_token %}
+    <p>ФИО</p>{{ form.fio }}<br>
+    <p>Номер телефона</p>{{ form.phone_number }}<br>
+    <p>Тип занятия(галочка если оффлайн)</p>{{ form.type_of_learning }}<br>
+    <p>Занятия по физике</p>{{ form.physics_learn }}<br>
+    <p>занятия по математике</p>{{ form.math_learn }}<br>
+<button type="submit">Записаться</button>
+</form>
+
 
 {% endblock %}

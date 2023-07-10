@@ -1,5 +1,5 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from .forms import QueriesForm
 
 def directions(request):
     return render(request, 'courses/directions.html')
@@ -7,12 +7,14 @@ def directions(request):
 
 def entryForm(request):
     if request.method == 'POST':
-        post_data = request.POST
-        subjects = list()
-        for key in post_data:
-            if post_data[key] == "on":
-                subjects.append(key)
-        data = {"subjects": subjects}
-        return render(request, 'courses/entryForm.html', context=data)
-    else:
-        return render(request, 'courses/entryForm.html')
+        form = QueriesForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    form = QueriesForm()
+
+    data = {
+        'form': form
+    }
+
+    return render(request, 'courses/entryForm.html', data)
