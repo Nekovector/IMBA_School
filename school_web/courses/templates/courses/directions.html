@@ -1,8 +1,30 @@
 {% extends 'main/layout.html'%}
 
-{% block title %} Направления {% endblock %}
-
-
+{% block title %}Курсы{% endblock %}
+{% block header %}Наши курсы{% endblock header %}
 {% block content %}
-<h1>Наши курсы </h1>
-{% endblock %}
+<div class="course-card" id="course-ct-math">
+  <button class="course-card__enroll-btn">Записаться</button>
+  <button class="course-card__more-info-btn">Подробнее</button>
+  <h2 class="course-card__title">
+    Подготовка к ЦТ <br>
+    по математике
+  </h2>
+</div>
+<div class="course-card" id="course-ct-physics">
+  <button class="course-card__enroll-btn">Записаться</button>
+  <button class="course-card__more-info-btn">Подробнее</button>
+  <h2 class="course-card__title">
+    Подготовка к ЦТ <br>
+    по физике
+  </h2>
+</div>
+<div class="course-card" id="course-9-grade-exams">
+  <button class="course-card__enroll-btn">Записаться</button>
+  <button class="course-card__more-info-btn">Подробнее</button>
+  <h2 class="course-card__title">
+    Экзамен после <br>
+    9-го класса
+  </h2>
+</div>
+{% endblock content %}
