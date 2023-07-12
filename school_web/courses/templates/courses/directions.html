@@ -4,18 +4,8 @@
 
 
 {% block content %}
-<h1>Наши курсы </h1>
-<a href="{% url 'passport' %}">Форма для записи</a>
-    {% csrf_token %}
-<!--<form action="{% url 'passport' %}" method="POST">
-    <div>
-      <input type="checkbox" id="maths" name="maths" checked>
-      <label for="maths">Математика</label>
-    </div>
-    <div>
-      <input type="checkbox" id="physics" name="physics" checked>
-      <label for="physics">Физика</label>
-    </div>
-    <button type="submit">Записаться на курсы</button>
-</form>-->
+    <h1>Наши курсы </h1>
+    <a href="{% url 'passport' %}?category=1">ЦТ/ЦЭ</a>
+    <a href="{% url 'passport' %}?category=2">Экзамен после 9-го класса</a>
+    <a href="{% url 'passport' %}?category=3">Улучшение успеваемости</a>
 {% endblock %}
