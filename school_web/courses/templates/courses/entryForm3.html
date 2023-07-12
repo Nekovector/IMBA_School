@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main/layout.html'%}
 
-</body>
-</html>
+{% block title %} Форма для записи {% endblock %}
+
+{% block content %}
+
+<h1>Форма для записи</h1>
+<form  method="post">
+    {% csrf_token %}
+    <p>Фамилия</p>{{ form.surname }}<br>
+    <p>Имя</p>{{ form.name }}<br>
+    <p>Отчество</p>{{ form.patronymic }}<br>
+    <p>Номер телефона</p>{{ form.phone_number }}<br>
+    <p>Номер класса</p>{{ form.grade_number }}<br>
+    <p>Онлайн обучение</p>{{ form.type_of_learning }}<br>
+    <p>занятия по Математике</p>{{ form.math_learn }}<br>
+    <p>занятия по Физике</p>{{ form.physics_learn }}<br>
+<button type="submit">Записаться</button>
+</form>
+
+
+{% endblock %}

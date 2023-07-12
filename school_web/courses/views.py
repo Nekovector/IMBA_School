@@ -49,3 +49,6 @@ def entryForm(request):
             if form.is_valid():
                 form.save()
         return redirect('home')
+
+def grade_info(request):
+    return render(request, 'courses/grade_buttons.html')

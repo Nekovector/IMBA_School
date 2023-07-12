@@ -1,4 +1,4 @@
-from .models import Queries1, Queries2
+from .models import Queries1, Queries2, Queries3
 from django.forms import ModelForm
 
 
@@ -11,4 +11,9 @@ class Queries1Form(ModelForm):
 class Queries2Form(ModelForm):
     class Meta:
         model = Queries2
-        fields = ['surname', 'name', 'patronymic', 'phone_number', 'type_of_learning', 'math_learn']
+        fields = ['surname', 'name', 'patronymic', 'phone_number',  'type_of_learning', 'math_learn']
+
+class Queries3Form(ModelForm):
+    class Meta:
+        model = Queries3
+        fields = ['surname', 'name', 'patronymic', 'phone_number', 'grade_number','type_of_learning', 'physics_learn', 'math_learn']
