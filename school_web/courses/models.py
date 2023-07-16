@@ -38,6 +38,7 @@ class Queries2(models.Model):
 
 #ПОВЫШЕНИЕ УСПЕВАЕМОСТИ
 class Queries3(models.Model):
+
     surname = models.CharField('Фамилия', max_length=50)
     name = models.CharField('Имя', max_length=50)
     patronymic = models.CharField('Отчество', max_length=50)
@@ -51,5 +52,5 @@ class Queries3(models.Model):
         return f"{self.surname} {self.name} {self.patronymic}"
 
     class Meta:
-        verbose_name = 'Заявка (После 9-го)'
-        verbose_name_plural = 'Заявки (После 9-го)'
+        verbose_name = 'Заявка ( Повышение успеваемости)'
+        verbose_name_plural = 'Заявки (Повышение успеваемости)'

@@ -11,10 +11,10 @@
     <p>Имя</p>{{ form.name }}<br>
     <p>Отчество</p>{{ form.patronymic }}<br>
     <p>Номер телефона</p>{{ form.phone_number }}<br>
-    <p>Номер класса</p>{{ form.grade_number }}<br>
+    <p>Номер класса ученика</p> <input value="{{ num }}" {{ form.grade_number }}> <br>
     <p>Онлайн обучение</p>{{ form.type_of_learning }}<br>
     <p>занятия по Математике</p>{{ form.math_learn }}<br>
-    <p>занятия по Физике</p>{{ form.physics_learn }}<br>
+    <p>занятия по Физике</p>{{ form.physics_learn }}
 <button type="submit">Записаться</button>
 </form>
 
