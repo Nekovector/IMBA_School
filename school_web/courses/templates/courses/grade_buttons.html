@@ -1,0 +1,16 @@
+{% extends 'main/layout.html'%}
+
+{% block title %} Об улучшении успеваемости {% endblock %}
+
+
+{% block content %}
+    <h1> Как мы готовим </h1>
+    <a href="{% url 'school-passport' %}?category=5">5</a><br>
+    <a href="{% url 'school-passport' %}?category=6">6</a><br>
+    <a href="{% url 'school-passport' %}?category=7">7</a><br>
+    <a href="{% url 'school-passport' %}?category=8">8</a><br>
+    <a href="{% url 'school-passport' %}?category=9">9</a><br>
+    <a href="{% url 'school-passport' %}?category=10">10</a><br>
+    <a href="{% url 'school-passport' %}?category=11">11</a><br>
+
+{% endblock %}
